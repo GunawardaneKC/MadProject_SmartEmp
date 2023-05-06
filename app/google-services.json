@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "31178298005",
+    "project_id": "freelancingapp-164f5",
+    "storage_bucket": "freelancingapp-164f5.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:31178298005:android:80f4191a5e49ffab55819c",
+        "android_client_info": {
+          "package_name": "com.freelancingapp.freelancingapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "31178298005-esd4seopqnufh84roltesbm4fqihuk41.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDlzqexxtNs6xZYtvR796im-PU8Iiv7r9c"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "31178298005-esd4seopqnufh84roltesbm4fqihuk41.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

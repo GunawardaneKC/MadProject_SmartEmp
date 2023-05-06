@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/LBlue"
+    tools:context=".ClientProfile">
+
+    <ImageButton
+        android:id="@+id/backButton"
+        android:layout_width="45dp"
+        android:layout_height="49dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="664dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/baseline_arrow_back_ios_new_24" />
+
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="313dp"
+        android:layout_height="487dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="48dp"
+        android:layout_marginBottom="160dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.98"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/box" />
+
+    <TextView
+        android:id="@+id/textView21"
+        android:layout_width="105dp"
+        android:layout_height="28dp"
+        android:layout_marginTop="8dp"
+        android:text="First name"
+        android:textSize="15sp"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="@+id/imageView2"
+        app:layout_constraintHorizontal_bias="0.095"
+        app:layout_constraintStart_toStartOf="@+id/imageView2"
+        app:layout_constraintTop_toTopOf="@+id/imageView2" />
+
+    <TextView
+        android:id="@+id/clientFirstName"
+        android:layout_width="176dp"
+        android:layout_height="28dp"
+        android:layout_marginTop="4dp"
+        android:ems="10"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="@+id/imageView2"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="@+id/imageView2"
+        app:layout_constraintTop_toBottomOf="@+id/textView21" />
+
+    <TextView
+        android:id="@+id/textView22"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="Last name"
+        android:textSize="15sp"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="@+id/textView21"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/textView21"
+        app:layout_constraintTop_toBottomOf="@+id/clientFirstName" />
+
+    <TextView
+        android:id="@+id/clientLastName"
+        android:layout_width="177dp"
+        android:layout_height="25dp"
+        android:layout_marginTop="4dp"
+        android:ems="10"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="@+id/clientFirstName"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/clientFirstName"
+        app:layout_constraintTop_toBottomOf="@+id/textView22" />
+
+    <TextView
+        android:id="@+id/textView23"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:text="Company"
+        android:textSize="15sp"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="@+id/textView22"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/textView22"
+        app:layout_constraintTop_toBottomOf="@+id/clientLastName" />
+
+    <TextView
+        android:id="@+id/clientCompanyName"
+        android:layout_width="174dp"
+        android:layout_height="32dp"
+        android:layout_marginTop="4dp"
+        android:ems="10"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="@+id/clientLastName"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/clientLastName"
+        app:layout_constraintTop_toBottomOf="@+id/textView23" />
+
+    <TextView
+        android:id="@+id/textView24"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Address"
+        android:textSize="15sp"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="@+id/textView23"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/textView23"
+        app:layout_constraintTop_toBottomOf="@+id/clientCompanyName" />
+
+    <TextView
+        android:id="@+id/clientAddress"
+        android:layout_width="182dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="4dp"
+        android:ems="10"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="@+id/clientCompanyName"
+        app:layout_constraintHorizontal_bias="0.472"
+        app:layout_constraintStart_toStartOf="@+id/clientCompanyName"
+        app:layout_constraintTop_toBottomOf="@+id/textView24" />
+
+    <TextView
+        android:id="@+id/textView25"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Phone number"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="@+id/textView24"
+        app:layout_constraintHorizontal_bias="0.027"
+        app:layout_constraintStart_toStartOf="@+id/textView24"
+        app:layout_constraintTop_toBottomOf="@+id/clientAddress" />
+
+    <TextView
+        android:id="@+id/clientPhone"
+        android:layout_width="183dp"
+        android:layout_height="32dp"
+        android:layout_marginTop="12dp"
+        android:ems="10"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="@+id/clientAddress"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/clientAddress"
+        app:layout_constraintTop_toBottomOf="@+id/textView25" />
+
+    <TextView
+        android:id="@+id/textView26"
+        android:layout_width="wrap_content"
+        android:layout_height="16dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="64dp"
+        android:text="Country"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toStartOf="@+id/imageView2"
+        app:layout_constraintTop_toBottomOf="@+id/textView25" />
+
+    <TextView
+        android:id="@+id/clientCountry"
+        android:layout_width="178dp"
+        android:layout_height="31dp"
+        android:layout_marginTop="12dp"
+        android:ems="10"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="@+id/clientPhone"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/clientPhone"
+        app:layout_constraintTop_toBottomOf="@+id/textView26" />
+
+    <TextView
+        android:id="@+id/textView27"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Region"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="@+id/textView26"
+        app:layout_constraintStart_toStartOf="@+id/textView26"
+        app:layout_constraintTop_toBottomOf="@+id/clientCountry" />
+
+    <TextView
+        android:id="@+id/clientRegion"
+        android:layout_width="177dp"
+        android:layout_height="31dp"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="@+id/clientCountry"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/clientCountry"
+        app:layout_constraintTop_toBottomOf="@+id/textView27" />
+
+
+    <Button
+        android:id="@+id/editClientDetaills"
+        android:layout_width="251dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="608dp"
+        android:backgroundTint="@color/DBlue"
+        android:onClick="EditDetails"
+        android:text="Edit Dtails"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

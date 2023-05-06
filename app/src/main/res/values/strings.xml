@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">FreelancingApp</string>
+    <string-array name="UserSelect">
+        <item>Freelancer (Looking for work)</item>
+        <item>Client (Looking for freelancers)</item>
+    </string-array>
+</resources>

@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#94D0E4"
+    tools:context=".ClientProfileForm"
+    tools:layout_editor_absoluteX="1dp"
+    tools:layout_editor_absoluteY="132dp">
+
+
+    <TextView
+        android:id="@+id/textView"
+        style="@android:style/TextAppearance.DeviceDefault.WindowTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Client Form"
+        android:textColor="#1E1E1E"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/client_first_name"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.653" />
+
+    <EditText
+        android:id="@+id/client_first_name"
+        android:layout_width="300dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="120dp"
+        android:ems="10"
+        android:hint="First Name"
+        android:importantForAutofill="no"
+        android:inputType="textAutoComplete"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:textColor="#1E1E1E"
+        android:textColorHint="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/client_last_name"
+        android:layout_width="300dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="11dp"
+        android:ems="10"
+        android:hint="Last Name"
+        android:importantForAutofill="no"
+        android:inputType="text"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:textColor="#1E1E1E"
+        android:textColorHint="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.513"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/client_first_name" />
+
+    <EditText
+        android:id="@+id/client_company_name"
+        android:layout_width="300dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="11dp"
+        android:ems="10"
+        android:hint="Company"
+        android:importantForAutofill="no"
+        android:inputType="text"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:textColor="#1E1E1E"
+        android:textColorHint="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.513"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/client_last_name" />
+
+    <EditText
+        android:id="@+id/client_phone"
+        android:layout_width="300dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="12dp"
+        android:ems="10"
+        android:hint="Phone Number"
+        android:importantForAutofill="no"
+        android:inputType="phone"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:textColor="#1E1E1E"
+        android:textColorHint="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.513"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/client_company_name" />
+
+    <EditText
+        android:id="@+id/client_address"
+        android:layout_width="300dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="11dp"
+        android:ems="10"
+        android:hint="Address"
+        android:importantForAutofill="no"
+        android:inputType="textPostalAddress"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:textColor="#1E1E1E"
+        android:textColorHint="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.513"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/client_phone" />
+
+    <EditText
+        android:id="@+id/client_region"
+        android:layout_width="300dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="11dp"
+        android:ems="10"
+        android:hint="State/Region"
+        android:importantForAutofill="no"
+        android:inputType="text"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:textColor="#1E1E1E"
+        android:textColorHint="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.513"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/client_address" />
+
+    <EditText
+        android:id="@+id/client_country"
+        android:layout_width="300dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="12dp"
+        android:ems="10"
+        android:hint="Country"
+        android:importantForAutofill="no"
+        android:inputType="textPostalAddress"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:textColor="#1E1E1E"
+        android:textColorHint="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.513"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/client_region" />
+
+
+    <RadioGroup
+        android:id="@+id/radioGroup2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:checkedButton="@id/client_male"
+        app:layout_constraintBottom_toBottomOf="@+id/text_gender"
+        app:layout_constraintStart_toEndOf="@+id/text_gender"
+        app:layout_constraintTop_toTopOf="@+id/text_gender">
+
+        <RadioButton
+            android:id="@+id/client_male"
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:text="Male"
+            android:textColor="#1E1E1E" />
+
+        <RadioButton
+            android:id="@+id/client_female"
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:text="Female"
+            android:textColor="#1E1E1E" />
+
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/text_gender"
+        android:layout_width="89dp"
+        android:layout_height="27dp"
+        android:paddingEnd="20dp"
+        android:text="Gender"
+        android:textColor="#1E1E1E"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/guideline2"
+        app:layout_constraintTop_toBottomOf="@+id/client_country"
+        app:layout_constraintVertical_bias="0.22"
+        tools:ignore="RtlSymmetry,TextSizeCheck" />
+
+    <Button
+        android:id="@+id/clientFormSubmit"
+        android:layout_width="288dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:backgroundTint="#006BB9"
+        android:text="Submit"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroup2"
+        app:layout_constraintVertical_bias="0.135" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="66dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="20dp" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
