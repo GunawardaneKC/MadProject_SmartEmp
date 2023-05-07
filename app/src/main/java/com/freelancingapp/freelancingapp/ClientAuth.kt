@@ -1,5 +1,6 @@
 package com.freelancingapp.freelancingapp
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.freelancingapp.freelancingapp.databinding.ActivityClientAuthBinding
@@ -20,23 +21,25 @@ class ClientAuth : AppCompatActivity() {
         binding = ActivityClientAuthBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        binding.imageButton.setOnClickListener {
+            startActivity(Intent(this, ClientAuthEdit::class.java))
+        }
+
         auth = FirebaseAuth.getInstance()
         database = FirebaseDatabase.getInstance().reference
 
-        // Get the current user
         val currentUser = auth.currentUser
 
-        // Display the email and username of the current user
         if (currentUser != null) {
             val email = currentUser.email
             val uid = currentUser.uid
 
-            binding.viewEmail.text = "Email: $email"
+            binding.viewEmail.text = "$email"
 
             database.child("Users").child(uid).addValueEventListener(object : ValueEventListener {
                 override fun onDataChange(snapshot: DataSnapshot) {
                     val username = snapshot.child("username").value.toString()
-                    binding.viewUsername.text = "Username: $username"
+                    binding.viewUsername.text = "$username"
                 }
 
                 override fun onCancelled(error: DatabaseError) {

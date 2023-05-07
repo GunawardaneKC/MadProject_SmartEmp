@@ -39,8 +39,6 @@ class SignupActivity : AppCompatActivity() {
 
                     firebaseAuth.createUserWithEmailAndPassword(email, pass).addOnCompleteListener{
                         if (it.isSuccessful){
-
-                            // Save user data to Firebase Database
                             val userRef = database.getReference("Users").child(firebaseAuth.currentUser!!.uid)
                             val userData = hashMapOf(
                                 "email" to email,
