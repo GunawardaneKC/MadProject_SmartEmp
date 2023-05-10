@@ -36,12 +36,12 @@ class ClientProfile : AppCompatActivity() {
 
         clientsRef.child(userId).addListenerForSingleValueEvent(object : ValueEventListener {
             override fun onDataChange(snapshot: DataSnapshot) {
-                val client = snapshot.getValue(Client::class.java)
+                val client = snapshot.getValue(ClientData::class.java)
                 if (client != null) {
-                    binding.clientFirstName.text = client.firstname
-                    binding.clientLastName.text = client.lastname
-                    binding.clientCompanyName.text = client.company
-                    binding.clientPhone.text = client.phone_number
+                    binding.clientFirstName.text = client.firstName
+                    binding.clientLastName.text = client.lastName
+                    binding.clientCompanyName.text = client.companyName
+                    binding.clientPhone.text = client.phone
                     binding.clientAddress.text = client.address
                     binding.clientRegion.text = client.region
                     binding.clientCountry.text = client.country
@@ -60,13 +60,13 @@ class ClientProfile : AppCompatActivity() {
         }
     }
 
-    data class Client(
-        val phone_number: String? = "",
-        val firstname: String? = "",
-        val lastname: String? = "",
-        val company: String? = "",
-        val address: String? = "",
-        val region: String? = "",
-        val country: String? = ""
-    )
+//    data class Client(
+//        val phone_number: String? = "",
+//        val firstname: String? = "",
+//        val lastname: String? = "",
+//        val company: String? = "",
+//        val address: String? = "",
+//        val region: String? = "",
+//        val country: String? = ""
+//    )
 }

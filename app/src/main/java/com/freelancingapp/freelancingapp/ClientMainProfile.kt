@@ -11,8 +11,8 @@ class ClientMainProfile : AppCompatActivity() {
         setContentView(R.layout.activity_client_main_profile)
     }
 
-    fun gotoFreelancerView(view: View) {
-        startActivity(Intent(this, ClientProfile::class.java))
+    fun clientFreelanBtnMain(view: View) {
+        startActivity(Intent(this, FreelancerFetch::class.java))
     }
     
     fun clientProfileBtnMain(view: View) {
@@ -20,11 +20,11 @@ class ClientMainProfile : AppCompatActivity() {
     }
 
     fun orderRedirectBtnMain(view: View) {
-        startActivity(Intent(this, ClientOrders::class.java))
+        startActivity(Intent(this, OrderLobby::class.java))
     }
 
-    fun paymentRedirectBtnMain(view: View) {
-        startActivity(Intent(this, ClientPayment::class.java))
+    fun messageRedirectBtnMain(view: View) {
+        startActivity(Intent(this, MessageLobby::class.java))
     }
 
     fun personalInformationBtnMain(view: View) {

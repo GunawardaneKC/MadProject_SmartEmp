@@ -174,34 +174,37 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.502"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextCountry" />
+        app:layout_constraintTop_toBottomOf="@+id/editTextCountry"
+        app:layout_constraintVertical_bias="0.176" />
 
     <Button
         android:id="@+id/SaveDetail"
         android:layout_width="251dp"
         android:layout_height="50dp"
-        android:layout_marginTop="596dp"
+        android:layout_marginTop="580dp"
         android:backgroundTint="@color/DBlue"
         android:onClick="SaveDetails"
         android:text="Save Details"
         android:textColor="@color/white"
+        app:layout_constraintBottom_toTopOf="@+id/DeleteDetail"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
 
     <Button
         android:id="@+id/DeleteDetail"
         android:layout_width="251dp"
         android:layout_height="50dp"
-        android:layout_marginTop="664dp"
         android:backgroundTint="@color/DBlue"
         android:onClick="DeleteDetails"
         android:text="Delete Details"
         android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.948" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

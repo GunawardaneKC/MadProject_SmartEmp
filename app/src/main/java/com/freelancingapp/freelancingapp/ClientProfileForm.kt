@@ -28,50 +28,43 @@ class ClientProfileForm : AppCompatActivity() {
 
             if (userId != null) {
 
-                val client_first_name = binding.clientFirstName.text.toString()
-                val client_last_name = binding.clientLastName.text.toString()
-                val client_company_name = binding.clientCompanyName.text.toString()
-                val client_phone = binding.clientAddress.text.toString()
-                val client_address = binding.clientAddress.text.toString()
-                val client_region = binding.clientRegion.text.toString()
-                val client_country = binding.clientCountry.text.toString()
-                val radioGroup2 = when (findViewById<RadioButton>(binding.radioGroup2.checkedRadioButtonId)) {
-                    binding.clientMale -> "Male"
-                    binding.clientFemale -> "Female"
-                    else -> ""
-                }
+                val clientData = ClientData(
+                    binding.clientFirstName.text.toString(),
+                    binding.clientLastName.text.toString(),
+                    binding.clientCompanyName.text.toString(),
+                    binding.clientPhone.text.toString(),
+                    binding.clientAddress.text.toString(),
+                    binding.clientRegion.text.toString(),
+                    binding.clientCountry.text.toString(),
+                    when (findViewById<RadioButton>(binding.radioGroup2.checkedRadioButtonId)) {
+                        binding.clientMale -> "Male"
+                        binding.clientFemale -> "Female"
+                        else -> ""
+                    }
+                )
 
-                fun createClientProfile(userId: String, firstname: String, lastname: String) {
-                    val clientsRef = FirebaseDatabase.getInstance().getReference("clients")
+                createClientProfile(userId, clientData)
 
-                    val clientData = mapOf(
-                        "firstname" to client_first_name,
-                        "lastname" to client_last_name,
-                        "company" to client_company_name,
-                        "phone_number" to client_phone,
-                        "address" to client_address,
-                        "region" to client_region,
-                        "country" to client_country,
-                        "Gender" to radioGroup2,
-                    )
-
-                    clientsRef.child(userId).setValue(clientData)
-                        .addOnSuccessListener {
-                            Toast.makeText(this, "Profile created successfully", Toast.LENGTH_SHORT)
-                                .show()
-                            val intent1 = Intent(this, ClientMainProfile::class.java)
-                            startActivity(intent1)
-
-                        }
-                        .addOnFailureListener {
-                            Toast.makeText(this, "Error creating profile", Toast.LENGTH_LONG)
-                                .show()
-                        }
-                }
-                createClientProfile(userId.toString(), client_first_name, client_last_name)
-            }else{
+            } else {
                 Toast.makeText(this, "User not authenticated", Toast.LENGTH_SHORT).show()
             }
         }
     }
+
+    private fun createClientProfile(userId: String, clientData: ClientData) {
+        val clientsRef = FirebaseDatabase.getInstance().getReference("clients")
+
+        clientsRef.child(userId).setValue(clientData)
+            .addOnSuccessListener {
+                Toast.makeText(this, "Profile created successfully", Toast.LENGTH_SHORT).show()
+                val intent1 = Intent(this, ClientMainProfile::class.java)
+                startActivity(intent1)
+
+            }
+            .addOnFailureListener {
+                Toast.makeText(this, "Error creating profile", Toast.LENGTH_LONG).show()
+            }
+    }
 }
+
+
