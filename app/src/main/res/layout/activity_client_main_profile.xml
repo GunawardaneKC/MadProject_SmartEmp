@@ -45,7 +45,7 @@
         android:layout_marginBottom="35dp"
         android:backgroundTint="@color/DBlue"
         android:onClick="orderRedirectBtnMain"
-        android:text="Order"
+        android:text="Jobs1"
         android:textColor="@color/white"
         app:layout_constraintBottom_toTopOf="@+id/messageRedirect"
         app:layout_constraintEnd_toEndOf="parent"

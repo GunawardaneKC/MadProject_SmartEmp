@@ -99,7 +99,8 @@
         android:ems="10"
         android:inputType="textPersonName"
         android:padding="7dp"
-        android:textColor="@color/black"
+        android:textColor="@color/LBlue"
+        android:textColorHighlight="@color/LBlue"
         app:layout_constraintBottom_toTopOf="@+id/imageView11"
         app:layout_constraintStart_toStartOf="@+id/textView40"
         app:layout_constraintTop_toTopOf="parent" />
