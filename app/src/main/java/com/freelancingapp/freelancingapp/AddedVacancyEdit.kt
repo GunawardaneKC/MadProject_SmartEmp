@@ -10,7 +10,7 @@ import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
 
 class msg(
-//    val mid: String? = "",
+    val mid: String? = "",
     val email: String? = "",
     val message: String? = ""
 )
@@ -41,6 +41,7 @@ class AddedVacancyEdit : AppCompatActivity() {
             if (client != null) {
                 binding.messageEmailEdit.setText(client.email)
                 binding.messageContentEdit.setText(client.message)
+                binding.mid.setText(client.mid)
             } else {
                 Toast.makeText(this, "Client data not found", Toast.LENGTH_SHORT).show()
             }
@@ -51,7 +52,8 @@ class AddedVacancyEdit : AppCompatActivity() {
         binding.messageEditBtn.setOnClickListener {
             val updatedClient = msg(
                 binding.messageEmailEdit.text.toString(),
-                binding.messageContentEdit.text.toString()
+                binding.messageContentEdit.text.toString(),
+                binding.mid.text.toString()
             )
 
             clientsRef.child(userId).setValue(updatedClient).addOnCompleteListener { task ->

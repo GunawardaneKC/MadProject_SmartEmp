@@ -75,6 +75,22 @@
         app:layout_constraintVertical_bias="1.0" />
 
     <TextView
+        android:id="@+id/mid"
+        android:layout_width="203dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:padding="7dp"
+        android:textColor="@color/LBlue"
+        android:textColorHighlight="@color/LBlue"
+        app:layout_constraintBottom_toTopOf="@+id/textView80"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
         android:id="@+id/textView80"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
