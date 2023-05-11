@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/LBlue"
+    android:background="@drawable/backgroundimageworld"
     tools:context=".ClientAuthEdit">
 
 
@@ -24,6 +24,7 @@
         android:layout_width="197dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
+        android:background="#BAE0E6"
         android:ems="10"
         android:inputType="textPersonName"
         android:textColor="@color/black"
@@ -39,6 +40,8 @@
         android:layout_marginTop="8dp"
         android:text="Email"
         android:textColor="@color/black"
+        android:textSize="16sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="@+id/textView39"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/textView39"
@@ -125,6 +128,8 @@
         android:layout_marginTop="16dp"
         android:text="Username"
         android:textColor="@color/black"
+        android:textSize="16sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="@+id/imageView11"
         app:layout_constraintHorizontal_bias="0.12"
         app:layout_constraintStart_toStartOf="@+id/imageView11"
@@ -134,6 +139,7 @@
         android:id="@+id/textView4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:background="#BAE0E6"
         android:text="You can't edit your email \n If you want to edit your email \n delete your current profile and \ncreate a new user."
         android:textAlignment="center"
         android:textColor="@color/black"

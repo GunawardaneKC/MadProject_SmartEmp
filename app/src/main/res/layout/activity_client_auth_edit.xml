@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/LBlue"
+    android:background="@drawable/backgroundimageworld"
     tools:context=".ClientAuthEdit">
 
 
@@ -39,9 +39,9 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:text="Email"
-        android:textStyle="bold"
-        android:textSize="16sp"
         android:textColor="@color/black"
+        android:textSize="16sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="@+id/textView39"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/textView39"
@@ -114,9 +114,9 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:text="Username"
+        android:textColor="@color/black"
         android:textSize="16sp"
         android:textStyle="bold"
-        android:textColor="@color/black"
         app:layout_constraintEnd_toEndOf="@+id/imageView11"
         app:layout_constraintHorizontal_bias="0.12"
         app:layout_constraintStart_toStartOf="@+id/imageView11"
