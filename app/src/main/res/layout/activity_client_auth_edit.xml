@@ -10,8 +10,8 @@
 
     <ImageView
         android:id="@+id/imageView11"
-        android:layout_width="263dp"
-        android:layout_height="200dp"
+        android:layout_width="265dp"
+        android:layout_height="214dp"
         android:layout_marginTop="120dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.466"
@@ -22,10 +22,11 @@
     <EditText
         android:id="@+id/editUsername"
         android:layout_width="197dp"
-        android:layout_height="33dp"
+        android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:ems="10"
         android:inputType="textPersonName"
+        android:textColor="@color/black"
         app:layout_constraintEnd_toEndOf="@+id/imageView11"
         app:layout_constraintHorizontal_bias="0.484"
         app:layout_constraintStart_toStartOf="@+id/imageView11"
@@ -37,11 +38,11 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:text="Email"
+        android:textColor="@color/black"
         app:layout_constraintEnd_toEndOf="@+id/textView39"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/textView39"
-        app:layout_constraintTop_toBottomOf="@+id/editUsername"
-        app:layout_constraintVertical_bias="0.333" />
+        app:layout_constraintTop_toBottomOf="@+id/editUsername" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/PassReset"
@@ -49,7 +50,7 @@
         android:layout_height="43dp"
         android:layout_marginTop="144dp"
         android:layout_marginEnd="8dp"
-        android:layout_marginBottom="40dp"
+        android:layout_marginBottom="41dp"
         android:background="@drawable/button"
         android:text="Reset Password"
         android:textColor="@color/white"
@@ -57,7 +58,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView11"
-        app:layout_constraintVertical_bias="0.333" />
+        app:layout_constraintVertical_bias="0.875" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/saveButton"
@@ -65,7 +66,7 @@
         android:layout_height="43dp"
         android:layout_marginTop="68dp"
         android:layout_marginEnd="8dp"
-        android:layout_marginBottom="39dp"
+        android:layout_marginBottom="41dp"
         android:background="@drawable/button"
         android:text="Save"
         android:textColor="@color/white"
@@ -93,15 +94,16 @@
     <TextView
         android:id="@+id/viewEmail"
         android:layout_width="203dp"
-        android:layout_height="35dp"
+        android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="48dp"
         android:ems="10"
         android:inputType="textPersonName"
         android:padding="7dp"
-        android:textColor="@color/black"
+        android:textColor="@color/LBlue"
+        android:textColorHighlight="@color/LBlue"
+        app:layout_constraintBottom_toTopOf="@+id/imageView11"
         app:layout_constraintStart_toStartOf="@+id/textView40"
-        app:layout_constraintTop_toBottomOf="@+id/editUsername" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/textView39"
@@ -109,10 +111,23 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:text="Username"
+        android:textColor="@color/black"
         app:layout_constraintEnd_toEndOf="@+id/imageView11"
         app:layout_constraintHorizontal_bias="0.12"
         app:layout_constraintStart_toStartOf="@+id/imageView11"
         app:layout_constraintTop_toTopOf="@+id/imageView11" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="You can't edit your email \n If you want to edit your email \n delete your current profile and \ncreate a new user."
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView11"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView40" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

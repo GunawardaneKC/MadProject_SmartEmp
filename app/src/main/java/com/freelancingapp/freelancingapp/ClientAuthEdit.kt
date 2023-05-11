@@ -1,5 +1,6 @@
 package com.freelancingapp.freelancingapp
 
+import android.content.Intent
 import android.os.Bundle
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
@@ -9,7 +10,7 @@ import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
 
-data class User(
+data class UserC(
     val username : String = "",
     val email : String = ""
 )
@@ -29,21 +30,15 @@ class ClientAuthEdit : AppCompatActivity() {
         firebaseAuth = FirebaseAuth.getInstance()
         userRef = FirebaseDatabase.getInstance().getReference("Users")
 
-//        val userId = firebaseAuth.currentUser?.uid
         val currentUser = firebaseAuth.currentUser
         if (currentUser != null) {
             val email = currentUser.email
-            val userId = firebaseAuth.currentUser?.uid
+            val uid = currentUser.uid
 
-            binding.viewEmail.text = "$email"
+            binding.viewEmail.text = email
 
-            if (userId == null) {
-                Toast.makeText(this, "User ID not found", Toast.LENGTH_SHORT).show()
-                return
-            }
-
-            userRef.child(userId).get().addOnSuccessListener { snapshot ->
-                val user = snapshot.getValue(User::class.java)
+            userRef.child(uid).get().addOnSuccessListener { snapshot ->
+                val user = snapshot.getValue(UserC::class.java)
                 if (user != null) {
                     binding.editUsername.setText(user.username)
                     binding.viewEmail.setText(user.email)
@@ -55,14 +50,13 @@ class ClientAuthEdit : AppCompatActivity() {
                     .show()
             }
 
-
             binding.saveButton.setOnClickListener {
-                val updatedUser = User(
+                val updatedUser = UserC(
                     binding.editUsername.text.toString(),
                     binding.viewEmail.text.toString()
                 )
 
-                userRef.child(userId).setValue(updatedUser).addOnCompleteListener { task ->
+                userRef.child(uid).setValue(updatedUser).addOnCompleteListener { task ->
                     if (task.isSuccessful) {
                         Toast.makeText(
                             this,
@@ -80,32 +74,38 @@ class ClientAuthEdit : AppCompatActivity() {
                 }
             }
 
-
             binding.deleteButton.setOnClickListener {
                 val builder = AlertDialog.Builder(this)
                 builder.setMessage("Are you sure you want to delete your account information?")
                 builder.setPositiveButton("Yes") { _, _ ->
-                    userRef.child(userId).removeValue().addOnCompleteListener { task ->
+                    currentUser.delete().addOnCompleteListener { task ->
                         if (task.isSuccessful) {
-                            Toast.makeText(
-                                this,
-                                "Account information deleted successfully",
-                                Toast.LENGTH_SHORT
-                            ).show()
-                            finish()
+                            userRef.child(uid).removeValue().addOnCompleteListener { task ->
+                                if (task.isSuccessful) {
+                                    Toast.makeText(this, "Account information deleted successfully", Toast.LENGTH_SHORT).show()
+                                    startActivity(Intent(this@ClientAuthEdit, activity_login::class.java))
+                                } else {
+                                    Toast.makeText(
+                                        this,
+                                        "${task.exception?.message}",
+                                        Toast.LENGTH_SHORT
+                                    ).show()
+                                    startActivity(Intent(this@ClientAuthEdit, activity_login::class.java))
+                                }
+                            }
                         } else {
                             Toast.makeText(
                                 this,
                                 "Error deleting account information: ${task.exception?.message}",
                                 Toast.LENGTH_SHORT
                             ).show()
+                            startActivity(Intent(this@ClientAuthEdit, activity_login::class.java))
                         }
                     }
                 }
                 builder.setNegativeButton("No") { _, _ -> }
                 builder.create().show()
             }
-
         }
     }
 }

@@ -21,14 +21,16 @@ class ClientAuth : AppCompatActivity() {
         binding = ActivityClientAuthBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        binding.imageButton.setOnClickListener {
+        binding.BtnEdit.setOnClickListener {
             startActivity(Intent(this, ClientAuthEdit::class.java))
         }
 
         auth = FirebaseAuth.getInstance()
         database = FirebaseDatabase.getInstance().reference
 
+
         val currentUser = auth.currentUser
+
 
         if (currentUser != null) {
             val email = currentUser.email

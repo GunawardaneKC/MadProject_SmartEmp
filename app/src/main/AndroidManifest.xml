@@ -12,7 +12,15 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.FreelancingApp"
         tools:targetApi="31">
-
+        <activity
+            android:name=".OrderFetch"
+            android:exported="true" />
+        <activity
+            android:name=".OrderEdit"
+            android:exported="true" />
+        <activity
+            android:name=".OrderFormRead"
+            android:exported="true" />
         <activity
             android:name=".activity_login"
             android:exported="true"
@@ -65,6 +73,79 @@
             android:windowSoftInputMode="adjustResize" />
         <activity
             android:name=".ClientAuthEdit"
+            android:exported="true"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".FreelancerAuthEdit"
+            android:exported="true"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".FreelancerAuth"
+            android:exported="true"
+            android:label="@string/title_activity_freelancer_auth"
+            android:theme="@style/Theme.FreelancingApp"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".FreelancerOrders"
+            android:exported="true"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".FreelancerMainProfile"
+            android:exported="true"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".FreelancerProfile"
+            android:exported="true"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".SentMessage"
+            android:exported="true"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".SendMessage"
+            android:exported="true"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".SendMessageEdit"
+            android:exported="true"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".MessageLobby"
+            android:exported="true"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".FreelancerView"
+            android:exported="true" />
+        <activity
+            android:name=".ClientSetOrders"
+            android:exported="true" />
+        <activity
+            android:name=".ViewMessage"
+            android:exported="true" /> <!-- <activity -->
+        <!-- android:name=".docFetching" -->
+        <!-- android:exported="true" /> -->
+        <activity
+            android:name=".OrderLobby"
+            android:exported="true" /> <!-- <activity -->
+        <!-- android:name=".orders.OrderFreelanceFetch" -->
+        <!-- android:exported="true" /> -->
+        <!-- <activity -->
+        <!-- android:name=".orders.OrderCilentFetch" -->
+        <!-- android:exported="true" /> -->
+        <activity
+            android:name=".FreelancerFetch"
+            android:exported="true" />
+        <activity
+            android:name=".FreelancerDetailEdit"
+            android:exported="true" />
+        <activity
+            android:name=".OrderFetch"
+            android:exported="true" />
+        <activity
+            android:name=".OrderEdit"
+            android:exported="true" />
+        <activity
+            android:name=".OrderFormRead"
             android:exported="true" />
     </application>
 
