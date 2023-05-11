@@ -1,5 +1,6 @@
 package com.freelancingapp.freelancingapp
 
+import android.annotation.SuppressLint
 import android.content.Intent
 import android.os.Bundle
 import android.widget.RadioButton
@@ -14,6 +15,7 @@ class FreelancerProfileForm : AppCompatActivity() {
     private lateinit var binding: ActivityFreelancerProfileFormBinding
     private lateinit var firebaseAuth: FirebaseAuth
 
+    @SuppressLint("SuspiciousIndentation")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
@@ -47,8 +49,22 @@ class FreelancerProfileForm : AppCompatActivity() {
                     skillsFreelancer,
                     radioGroupFreelancer
                 )
+                    if (firstNameFreelancer.isEmpty()){
+                        binding.freelancerFirstName.error = "Please enter First Name"
+                }
+                if (lastNameFreelancer.isEmpty()){
+                    binding.freelancerLastName.error = "Please enter Last Name"
+                }
+                if (phoneFreelancer.isEmpty()){
+                    binding.freelancerPhone.error = "Please enter Phone Number"
+                }
+                if (addressFreelancer.isEmpty()){
+                    binding.freelancerAddress.error = "Please enter tour Address"
+                }
+                else {
 
-                createFreelancerProfile(userId.toString(), freelancerProfile)
+                        createFreelancerProfile(userId.toString(), freelancerProfile)
+                    }
             }else{
                 Toast.makeText(this, "User not authenticated", Toast.LENGTH_SHORT).show()
             }

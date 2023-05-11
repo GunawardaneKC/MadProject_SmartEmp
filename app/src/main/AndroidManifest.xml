@@ -13,6 +13,9 @@
         android:theme="@style/Theme.FreelancingApp"
         tools:targetApi="31">
         <activity
+            android:name=".OrderFetch"
+            android:exported="true" />
+        <activity
             android:name=".OrderEdit"
             android:exported="true" />
         <activity
@@ -134,6 +137,15 @@
             android:exported="true" />
         <activity
             android:name=".FreelancerDetailEdit"
+            android:exported="true" />
+        <activity
+            android:name=".OrderFetch"
+            android:exported="true" />
+        <activity
+            android:name=".OrderEdit"
+            android:exported="true" />
+        <activity
+            android:name=".OrderFormRead"
             android:exported="true" />
     </application>
 
