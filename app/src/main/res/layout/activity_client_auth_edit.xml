@@ -21,14 +21,15 @@
 
     <EditText
         android:id="@+id/editUsername"
-        android:layout_width="197dp"
+        android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
+        android:background="#BAE0E6"
         android:ems="10"
         android:inputType="textPersonName"
         android:textColor="@color/black"
         app:layout_constraintEnd_toEndOf="@+id/imageView11"
-        app:layout_constraintHorizontal_bias="0.484"
+        app:layout_constraintHorizontal_bias="0.523"
         app:layout_constraintStart_toStartOf="@+id/imageView11"
         app:layout_constraintTop_toBottomOf="@+id/textView39" />
 
@@ -38,6 +39,8 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:text="Email"
+        android:textStyle="bold"
+        android:textSize="16sp"
         android:textColor="@color/black"
         app:layout_constraintEnd_toEndOf="@+id/textView39"
         app:layout_constraintHorizontal_bias="0.0"
@@ -111,6 +114,8 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:text="Username"
+        android:textSize="16sp"
+        android:textStyle="bold"
         android:textColor="@color/black"
         app:layout_constraintEnd_toEndOf="@+id/imageView11"
         app:layout_constraintHorizontal_bias="0.12"
@@ -119,8 +124,9 @@
 
     <TextView
         android:id="@+id/textView4"
-        android:layout_width="wrap_content"
+        android:layout_width="200dp"
         android:layout_height="wrap_content"
+        android:background="#BAE0E6"
         android:text="You can't edit your email \n If you want to edit your email \n delete your current profile and \ncreate a new user."
         android:textAlignment="center"
         android:textColor="@color/black"
