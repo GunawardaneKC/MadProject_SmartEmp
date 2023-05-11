@@ -30,4 +30,7 @@ class ClientMainProfile : AppCompatActivity() {
     fun personalInformationBtnMain(view: View) {
         startActivity(Intent(this, ClientProfile::class.java))
     }
+    fun signoutbutton(view: View) {
+        startActivity(Intent(this, activity_login::class.java))
+    }
 }
