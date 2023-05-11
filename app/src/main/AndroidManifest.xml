@@ -12,15 +12,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.FreelancingApp"
         tools:targetApi="31">
-        <activity
-            android:name=".OrderFetch"
-            android:exported="true" />
-        <activity
-            android:name=".OrderEdit"
-            android:exported="true" />
-        <activity
-            android:name=".OrderFormRead"
-            android:exported="true" />
+
         <activity
             android:name=".activity_login"
             android:exported="true"
@@ -98,15 +90,15 @@
             android:exported="true"
             android:windowSoftInputMode="adjustResize" />
         <activity
-            android:name=".SentMessage"
+            android:name=".AddedVacancy"
             android:exported="true"
             android:windowSoftInputMode="adjustResize" />
         <activity
-            android:name=".SendMessage"
+            android:name=".AddedVacancyEdit"
             android:exported="true"
             android:windowSoftInputMode="adjustResize" />
         <activity
-            android:name=".SendMessageEdit"
+            android:name=".AddVacancy"
             android:exported="true"
             android:windowSoftInputMode="adjustResize" />
         <activity
