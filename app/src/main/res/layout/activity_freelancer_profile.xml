@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#94D0E4"
+    tools:context=".FreelancerProfileForm"
+    tools:layout_editor_absoluteX="1dp"
+    tools:layout_editor_absoluteY="132dp">
+
+    <TextView
+        android:id="@+id/freelancerFirstName"
+        android:layout_width="300dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="76dp"
+        android:ems="10"
+        android:importantForAutofill="no"
+        android:inputType="textAutoComplete"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:textColor="#1E1E1E"
+        android:textColorHint="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.504"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/freelancerLastName"
+        android:layout_width="300dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="14dp"
+        android:ems="10"
+        android:importantForAutofill="no"
+        android:inputType="text"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:textColor="#1E1E1E"
+        android:textColorHint="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/freelancerFirstName" />
+
+    <TextView
+        android:id="@+id/freelancerPhone"
+        android:layout_width="300dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="14dp"
+        android:ems="10"
+        android:importantForAutofill="no"
+        android:inputType="phone"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:textColor="#1E1E1E"
+        android:textColorHint="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/freelancerLastName"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/freelancerAddress"
+        android:layout_width="300dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="14dp"
+        android:ems="10"
+        android:importantForAutofill="no"
+        android:inputType="textPostalAddress"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:textColor="#1E1E1E"
+        android:textColorHint="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/freelancerPhone" />
+
+
+    <TextView
+        android:id="@+id/freelancerSkills"
+        android:layout_width="306dp"
+        android:layout_height="52dp"
+        android:layout_marginTop="14dp"
+        android:ems="10"
+        android:importantForAutofill="no"
+        android:inputType="textPostalAddress"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:textColor="#1E1E1E"
+        android:textColorHint="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/freelancerAddress"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/freelancerFormedit"
+        android:layout_width="203dp"
+        android:layout_height="48dp"
+        android:layout_marginBottom="76dp"
+        android:backgroundTint="#006BB9"
+        android:text="Edit"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/freelancerSkills"
+        app:layout_constraintVertical_bias="0.692" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="66dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="20dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

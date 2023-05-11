@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@drawable/backgroundimageworld"
+    tools:context=".FreelancerMainProfile">
+
+
+    <Button
+        android:id="@+id/FreelancerProfileBtn"
+        android:layout_width="251dp"
+        android:layout_height="50dp"
+        android:layout_marginBottom="39dp"
+        android:backgroundTint="@color/DBlue"
+        android:onClick="freelancerProfileBtnMain"
+        android:text="Profile"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toTopOf="@+id/freelancerPersonalInfoRedirect"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <Button
+        android:id="@+id/freelancerPersonalInfoRedirect"
+        android:layout_width="251dp"
+        android:layout_height="50dp"
+        android:layout_marginBottom="32dp"
+        android:backgroundTint="@color/DBlue"
+        android:onClick="freelancerPersonalInfoRedirect"
+        android:text="Personal Information"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toTopOf="@+id/freelancerOrdersRedirect"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/freelancerOrdersRedirect"
+        android:layout_width="251dp"
+        android:layout_height="50dp"
+        android:layout_marginBottom="32dp"
+        android:backgroundTint="@color/DBlue"
+        android:onClick="freelancerOrdersRedirectBtnMain"
+        android:text="Jobs"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toTopOf="@+id/Freelancervacancies"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/Freelancervacancies"
+        android:layout_width="251dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="452dp"
+        android:backgroundTint="@color/DBlue"
+        android:onClick="freelancerVacancy"
+        android:text="Vacancies"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/freelancerSignOut"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_marginBottom="24dp"
+        android:backgroundTint="@color/DBlue"
+        android:onClick="FreelancerSignOut"
+        android:text="Sign out"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.112"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

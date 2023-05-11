@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".OrderLobby"
+    android:background="@drawable/backgroundimageworld">
+
+
+    <ImageButton
+        android:id="@+id/backButton"
+        android:layout_width="60dp"
+        android:layout_height="49dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="664dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/baseline_arrow_back_ios_new_24" />
+
+    <Button
+        android:id="@+id/addOrder"
+        android:layout_width="251dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="292dp"
+        android:backgroundTint="@color/DBlue"
+        android:onClick="AddOrder"
+        android:text="Add Job"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/addedOrders"
+        android:layout_width="251dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="72dp"
+        android:backgroundTint="@color/DBlue"
+        android:onClick="AddedOrder"
+        android:text="Added Jobs"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/addOrder" />
+
+    <!--    <Button-->
+    <!--        android:id="@+id/PaymentRedirect"-->
+    <!--        android:layout_width="251dp"-->
+    <!--        android:layout_height="50dp"-->
+    <!--        android:layout_marginBottom="212dp"-->
+    <!--        android:onClick="PaymentRedirectBtnMain"-->
+    <!--        android:text="Payment"-->
+    <!--        android:textColor="@color/white"-->
+    <!--        android:backgroundTint="@color/DBlue"-->
+    <!--        app:layout_constraintBottom_toBottomOf="parent"-->
+    <!--        app:layout_constraintEnd_toEndOf="parent"-->
+    <!--        app:layout_constraintHorizontal_bias="0.5"-->
+    <!--        app:layout_constraintStart_toStartOf="parent" />-->
+
+    <!--    <Button-->
+    <!--        android:id="@+id/PersonalInfoRedirect"-->
+    <!--        android:layout_width="251dp"-->
+    <!--        android:layout_height="50dp"-->
+    <!--        android:layout_marginBottom="28dp"-->
+    <!--        android:onClick="PersonalInformationBtnMain"-->
+    <!--        android:text="Personal Information"-->
+    <!--        android:textColor="@color/white"-->
+    <!--        android:backgroundTint="@color/DBlue"-->
+    <!--        app:layout_constraintBottom_toTopOf="@+id/OrderRedirect"-->
+    <!--        app:layout_constraintEnd_toEndOf="parent"-->
+    <!--        app:layout_constraintHorizontal_bias="0.5"-->
+    <!--        app:layout_constraintStart_toStartOf="parent" />-->
+
+</androidx.constraintlayout.widget.ConstraintLayout>

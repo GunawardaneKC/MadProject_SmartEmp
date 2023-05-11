@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#78CBE6"
+    tools:context=".AddVacancy">
+
+
+    <EditText
+        android:id="@+id/messageContent"
+        android:layout_width="301dp"
+        android:layout_height="220dp"
+        android:layout_marginBottom="36dp"
+        android:background="@drawable/frame_background_green"
+        android:ems="10"
+        android:hint="Type Your vacancy details..."
+        android:inputType="textPersonName"
+        android:padding="15dp"
+        app:layout_constraintBottom_toTopOf="@+id/messageSaveBtn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/messageSaveBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="76dp"
+        android:backgroundTint="@color/DBlue"
+        android:text="Send"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/messageEmail"
+        android:layout_width="285dp"
+        android:layout_height="84dp"
+        android:layout_marginBottom="84dp"
+        android:background="@drawable/frame_background_green"
+        android:ems="10"
+        android:hint="Company Name"
+        android:inputType="textPersonName"
+        android:padding="15dp"
+        android:textColorHint="@color/black"
+        app:layout_constraintBottom_toTopOf="@+id/messageContent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textView80"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="56dp"
+        android:text="Vacancy Request"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textSize="26dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/messageEmail"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.887" />
+</androidx.constraintlayout.widget.ConstraintLayout>

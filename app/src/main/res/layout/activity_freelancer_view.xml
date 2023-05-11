@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#78CBE6"
+    tools:context=".FreelancerView">
+
+
+    <EditText
+        android:id="@+id/messageContent"
+        android:layout_width="301dp"
+        android:layout_height="220dp"
+        android:layout_marginBottom="36dp"
+        android:background="@drawable/frame_background_green"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Type here.."
+        android:padding="15dp"
+        app:layout_constraintBottom_toTopOf="@+id/button10"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/button10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="76dp"
+        android:background="#349AB1"
+        android:text="Send"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.947"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/editTextTextPersonName21"
+        android:layout_width="285dp"
+        android:layout_height="84dp"
+        android:layout_marginBottom="84dp"
+        android:background="@drawable/frame_background_green"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:padding="15dp"
+        android:text="Freelancer Name"
+        app:layout_constraintBottom_toTopOf="@+id/messageContent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textView80"
+        android:layout_width="241dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="56dp"
+        android:text="Type your message"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textSize="26dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/editTextTextPersonName21"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.887" />
+</androidx.constraintlayout.widget.ConstraintLayout>
