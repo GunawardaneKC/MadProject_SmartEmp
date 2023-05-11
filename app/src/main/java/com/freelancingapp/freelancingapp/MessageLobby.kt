@@ -16,7 +16,7 @@ class MessageLobby : AppCompatActivity() {
     }
 
     fun sentMessages(view: View) {
-        startActivity(Intent(this, AddedVacancyEdit::class.java))
+        startActivity(Intent(this, AddedVacancy::class.java))
     }
 
 }
